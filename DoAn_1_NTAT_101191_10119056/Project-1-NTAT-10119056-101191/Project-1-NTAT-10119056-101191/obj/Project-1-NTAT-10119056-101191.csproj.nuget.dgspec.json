@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\Project-1-Nguyen-Thang\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191.csproj": {}
+    "C:\\Users\\thang\\Desktop\\Học Tập\\Chuyên Ngành\\Project-1\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\Project-1-Nguyen-Thang\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191.csproj": {
+    "C:\\Users\\thang\\Desktop\\Học Tập\\Chuyên Ngành\\Project-1\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\Project-1-Nguyen-Thang\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191.csproj",
+        "projectUniqueName": "C:\\Users\\thang\\Desktop\\Học Tập\\Chuyên Ngành\\Project-1\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191.csproj",
         "projectName": "Project-1-NTAT-10119056-101191",
-        "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\Project-1-Nguyen-Thang\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\Project-1-Nguyen-Thang\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\obj\\",
+        "projectPath": "C:\\Users\\thang\\Desktop\\Học Tập\\Chuyên Ngành\\Project-1\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191.csproj",
+        "packagesPath": "C:\\Users\\thang\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thang\\Desktop\\Học Tập\\Chuyên Ngành\\Project-1\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\thang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -26,6 +30,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +42,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -52,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
