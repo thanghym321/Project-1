@@ -5,11 +5,13 @@ using Project_1_NTAT_10119056_101191.DataAccessLayer.IDataAccessLayer;
 using Project_1_NTAT_10119056_101191.Entities;
 using System.IO;
 
+
 namespace Project_1_NTAT_10119056_101191.DataAccessLayer
 {
     class KhachHangDAL:IKhachHangDAL
     {
         private string filekh = "Data/KhachHang.txt";
+
         public List<KhachHang> ListKhachHang()
         {
             List<KhachHang> listkh = new List<KhachHang>();
@@ -20,7 +22,7 @@ namespace Project_1_NTAT_10119056_101191.DataAccessLayer
                 if (s != "")
                 {
                     string[] a = s.Split('|');
-                    listkh.Add(new KhachHang(a[0], a[1],int.Parse(a[2]),a[4]));
+                    listkh.Add(new KhachHang(a[0], a[1], a[2], int.Parse(a[3])));
                 }
                 s = read.ReadLine();
             }
@@ -31,7 +33,7 @@ namespace Project_1_NTAT_10119056_101191.DataAccessLayer
         {
             StreamWriter write = File.AppendText(filekh);
             write.WriteLine();
-            write.Write(kh.Makhachhang + "|" + kh.Tenkhachhang + "|" + kh.Sodienthoai + "|" + kh.Diachi);
+            write.Write(kh.Makhachhang + "|" + kh.Tenkhachhang + "|" + kh.Diachi + "|" + kh.Sodienthoai);
             write.Close();
         }
         public void CapNhatKhachHang(List<KhachHang> list)
@@ -40,7 +42,7 @@ namespace Project_1_NTAT_10119056_101191.DataAccessLayer
             for (int i = 0; i < list.Count; i++)
             {
                 write.WriteLine();
-                write.WriteLine(list[i].Makhachhang + "|" + list[i].Tenkhachhang + "|" + list[i].Sodienthoai + "|" + list[i].Diachi);
+                write.WriteLine(list[i].Makhachhang + "|" + list[i].Tenkhachhang + "|" + list[i].Diachi + "|" + list[i].Sodienthoai);
             }
             write.Close();
         }

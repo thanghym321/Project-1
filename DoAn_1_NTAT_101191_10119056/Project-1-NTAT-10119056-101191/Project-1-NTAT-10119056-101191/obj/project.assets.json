@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\thang\\Desktop\\Học Tập\\Chuyên Ngành\\Project-1\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191.csproj",
+      "projectUniqueName": "C:\\Users\\thang\\Desktop\\Project-1(chính)\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191.csproj",
       "projectName": "Project-1-NTAT-10119056-101191",
-      "projectPath": "C:\\Users\\thang\\Desktop\\Học Tập\\Chuyên Ngành\\Project-1\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191.csproj",
+      "projectPath": "C:\\Users\\thang\\Desktop\\Project-1(chính)\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191.csproj",
       "packagesPath": "C:\\Users\\thang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thang\\Desktop\\Học Tập\\Chuyên Ngành\\Project-1\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\obj\\",
+      "outputPath": "C:\\Users\\thang\\Desktop\\Project-1(chính)\\DoAn_1_NTAT_101191_10119056\\Project-1-NTAT-10119056-101191\\Project-1-NTAT-10119056-101191\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

@@ -30,10 +30,10 @@ namespace Project_1_NTAT_10119056_101191.DataAccessLayer
         }
         public void ThemSanPham(SanPham sp)
         {
-            StreamWriter ghi = File.AppendText(filesp);
-            ghi.WriteLine();
-            ghi.Write(sp.Masanpham + "|" + sp.Tensanpham + "|" + sp.Loai + "|" + sp.Soluong + "|" + sp.Dongia);
-            ghi.Close();
+            StreamWriter write = File.AppendText(filesp);
+            write.WriteLine();
+            write.Write(sp.Masanpham + "|" + sp.Tensanpham + "|" + sp.Loai + "|" + sp.Soluong + "|" + sp.Dongia);
+            write.Close();
         }
         public void CapNhatSanPham(List<SanPham> list)
         {

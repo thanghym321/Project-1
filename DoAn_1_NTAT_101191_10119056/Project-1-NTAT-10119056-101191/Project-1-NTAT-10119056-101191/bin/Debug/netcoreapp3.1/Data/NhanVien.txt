@@ -1,0 +1,10 @@
+
+nv2|Trương Văn Dũng|Nam|Bảo vệ|Hưng Yên|379114366
+
+nv3|Dương Vũ Hoàng Việt|Nam|Bán Hàng|Hưng Yên|379114366
+
+nv4|Vũ Đăng Thắng|Nam|Bán Hàng|Hưng Yên|379114366
+
+nv5|Nguyễn Chí Mạnh|Nam|Bán Hàng|Hưng Yên|379114366
+
+nv1|Trần Ngọc Tú|Nam|Bán Hàng|Hưng Yên|379114366

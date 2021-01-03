@@ -5,7 +5,6 @@ using Project_1_NTAT_10119056_101191.BusinessLayer.IBusinessLayer;
 using Project_1_NTAT_10119056_101191.Entities;
 using Project_1_NTAT_10119056_101191.DataAccessLayer;
 using Project_1_NTAT_10119056_101191.DataAccessLayer.IDataAccessLayer;
-using Project_1_NTAT_10119056_101191.Presenation;
 
 namespace Project_1_NTAT_10119056_101191.BusinessLayer
 {
@@ -48,21 +47,20 @@ namespace Project_1_NTAT_10119056_101191.BusinessLayer
             Console.WriteLine("╚═════════════════╩═══════════════════════════════════════════════════╩════════════════╩═════════════╩═════════════════╝");
             int i = 5;
 
-            foreach (var sp in list)
+            foreach (var x in list)
             {
-                Console.SetCursorPosition(7, i); Console.WriteLine(sp.Masanpham);
-                Console.SetCursorPosition(22, i); Console.WriteLine(sp.Tensanpham);
-                Console.SetCursorPosition(75, i); Console.WriteLine(sp.Loai);
-                Console.SetCursorPosition(93, i); Console.WriteLine(sp.Soluong);
-                Console.SetCursorPosition(107, i); Console.WriteLine(sp.Dongia);
+                Console.SetCursorPosition(7, i); Console.Write(x.Masanpham);
+                Console.SetCursorPosition(22, i); Console.Write(x.Tensanpham);
+                Console.SetCursorPosition(75, i); Console.Write(x.Loai);
+                Console.SetCursorPosition(93, i); Console.Write(x.Soluong);
+                Console.SetCursorPosition(107, i); Console.Write(x.Dongia);
                 i++;
             }
         }
         public void ThemSanPham()
         {
-            int sosp;
-            Console.SetCursorPosition(45, 5);
-            Console.Write("Nhập số sản phẩm cần nhập: "); sosp = int.Parse(Console.ReadLine());
+            Console.SetCursorPosition(42, 13);
+            Console.Write("Nhập số sản phẩm cần nhập: "); int sosp = int.Parse(Console.ReadLine());
             Console.Clear();
             for (int i = 0; i < sosp; i++)
             {
@@ -127,8 +125,7 @@ namespace Project_1_NTAT_10119056_101191.BusinessLayer
         {
             HienSanPham();
             Console.SetCursorPosition(37, 28); Console.Write("Nhập mã sản phẩm cần sửa: ");
-            string masanpham;
-            masanpham = Console.ReadLine();
+            string masanpham = Console.ReadLine();
             int i = 0;
             List<SanPham> list = ListSanPham();
             for (i = 0; i < list.Count; ++i)
@@ -169,11 +166,11 @@ namespace Project_1_NTAT_10119056_101191.BusinessLayer
                             do
                             {
                                 Console.SetCursorPosition(50, 2); Console.Write("THÔNG TIN SẢN PHẨM ĐANG SỬA");
-                                Console.SetCursorPosition(50, 3); Console.Write("Mã       : " + sp.Masanpham);
-                                Console.SetCursorPosition(50, 4); Console.Write("Tên      : " + sp.Tensanpham);
-                                Console.SetCursorPosition(50, 5); Console.Write("Loại     : " + sp.Loai);
-                                Console.SetCursorPosition(50, 6); Console.Write("Số lượng : " + sp.Soluong);
-                                Console.SetCursorPosition(50, 7); Console.Write("Đơn giá  : " + sp.Dongia);
+                                Console.SetCursorPosition(50, 3); Console.Write("Mã sản phẩm  : " + sp.Masanpham);
+                                Console.SetCursorPosition(50, 4); Console.Write("Tên sản phẩm : " + sp.Tensanpham);
+                                Console.SetCursorPosition(50, 5); Console.Write("Loại         : " + sp.Loai);
+                                Console.SetCursorPosition(50, 6); Console.Write("Số lượng     : " + sp.Soluong);
+                                Console.SetCursorPosition(50, 7); Console.Write("Đơn giá      : " + sp.Dongia);
                                 Console.SetCursorPosition(50, 13); Console.Write("Nhập mã sản phẩm mới: ");
                                 string mamoi = Console.ReadLine();
                                 foreach (var x in ListSanPham())
@@ -188,10 +185,7 @@ namespace Project_1_NTAT_10119056_101191.BusinessLayer
                                     }
                                     else
                                     {
-                                        if (!string.IsNullOrEmpty(mamoi))
-                                        {
-                                            sp.Masanpham = mamoi;
-                                        }
+                                        sp.Masanpham = mamoi;
                                         ktma = false;
                                     }
                                 }
@@ -202,14 +196,13 @@ namespace Project_1_NTAT_10119056_101191.BusinessLayer
                         {
                             Console.Clear();
                             Console.SetCursorPosition(50, 2); Console.Write("THÔNG TIN SẢN PHẨM ĐANG SỬA");
-                            Console.SetCursorPosition(50, 3); Console.Write("Mã       : " + sp.Masanpham);
-                            Console.SetCursorPosition(50, 4); Console.Write("Tên      : " + sp.Tensanpham);
-                            Console.SetCursorPosition(50, 5); Console.Write("Loại     : " + sp.Loai);
-                            Console.SetCursorPosition(50, 6); Console.Write("Số lượng : " + sp.Soluong);
-                            Console.SetCursorPosition(50, 7); Console.Write("Đơn giá  : " + sp.Dongia);
+                            Console.SetCursorPosition(50, 3); Console.Write("Mã sản phẩm  : " + sp.Masanpham);
+                            Console.SetCursorPosition(50, 4); Console.Write("Tên sản phẩm : " + sp.Tensanpham);
+                            Console.SetCursorPosition(50, 5); Console.Write("Loại         : " + sp.Loai);
+                            Console.SetCursorPosition(50, 6); Console.Write("Số lượng     : " + sp.Soluong);
+                            Console.SetCursorPosition(50, 7); Console.Write("Đơn giá      : " + sp.Dongia);
 
-                            Console.SetCursorPosition(50, 13); Console.WriteLine("Nhập tên sản phẩm mới: ");
-                            Console.SetCursorPosition(73, 13);
+                            Console.SetCursorPosition(50, 13); Console.Write("Nhập tên sản phẩm mới: ");
                             string tenmoi = Console.ReadLine();
                             if (!string.IsNullOrEmpty(tenmoi))
                             {
@@ -221,14 +214,13 @@ namespace Project_1_NTAT_10119056_101191.BusinessLayer
                         {
                             Console.Clear();
                             Console.SetCursorPosition(50, 2); Console.Write("THÔNG TIN SẢN PHẨM ĐANG SỬA");
-                            Console.SetCursorPosition(50, 3); Console.Write("Mã       : " + sp.Masanpham);
-                            Console.SetCursorPosition(50, 4); Console.Write("Tên      : " + sp.Tensanpham);
-                            Console.SetCursorPosition(50, 5); Console.Write("Loại     : " + sp.Loai);
-                            Console.SetCursorPosition(50, 6); Console.Write("Số lượng : " + sp.Soluong);
-                            Console.SetCursorPosition(50, 7); Console.Write("Đơn giá  : " + sp.Dongia);
+                            Console.SetCursorPosition(50, 3); Console.Write("Mã sản phẩm  : " + sp.Masanpham);
+                            Console.SetCursorPosition(50, 4); Console.Write("Tên sản phẩm : " + sp.Tensanpham);
+                            Console.SetCursorPosition(50, 5); Console.Write("Loại         : " + sp.Loai);
+                            Console.SetCursorPosition(50, 6); Console.Write("Số lượng     : " + sp.Soluong);
+                            Console.SetCursorPosition(50, 7); Console.Write("Đơn giá      : " + sp.Dongia);
 
-                            Console.SetCursorPosition(50, 13); Console.WriteLine("Nhập loại sản phẩm mới: ");
-                            Console.SetCursorPosition(74, 13);
+                            Console.SetCursorPosition(50, 13); Console.Write("Nhập loại sản phẩm mới: ");
                             string loaimoi = Console.ReadLine();
                             if (!string.IsNullOrEmpty(loaimoi))
                             {
@@ -240,14 +232,13 @@ namespace Project_1_NTAT_10119056_101191.BusinessLayer
                         {
                             Console.Clear();
                             Console.SetCursorPosition(50, 2); Console.Write("THÔNG TIN SẢN PHẨM ĐANG SỬA");
-                            Console.SetCursorPosition(50, 3); Console.Write("Mã       : " + sp.Masanpham);
-                            Console.SetCursorPosition(50, 4); Console.Write("Tên      : " + sp.Tensanpham);
-                            Console.SetCursorPosition(50, 5); Console.Write("Loại     : " + sp.Loai);
-                            Console.SetCursorPosition(50, 6); Console.Write("Số lượng : " + sp.Soluong);
-                            Console.SetCursorPosition(50, 7); Console.Write("Đơn giá  : " + sp.Dongia);
+                            Console.SetCursorPosition(50, 3); Console.Write("Mã sản phẩm  : " + sp.Masanpham);
+                            Console.SetCursorPosition(50, 4); Console.Write("Tên sản phẩm : " + sp.Tensanpham);
+                            Console.SetCursorPosition(50, 5); Console.Write("Loại         : " + sp.Loai);
+                            Console.SetCursorPosition(50, 6); Console.Write("Số lượng     : " + sp.Soluong);
+                            Console.SetCursorPosition(50, 7); Console.Write("Đơn giá      : " + sp.Dongia);
 
-                            Console.SetCursorPosition(45, 13); Console.WriteLine("Nhập số lượng sản phẩm mới: ");
-                            Console.SetCursorPosition(78, 13);
+                            Console.SetCursorPosition(50, 13); Console.Write("Nhập số lượng sản phẩm mới: ");
                             int soluongmoi = int.Parse(Console.ReadLine());
                             if (soluongmoi > 0)
                             {
@@ -259,14 +250,13 @@ namespace Project_1_NTAT_10119056_101191.BusinessLayer
                         {
                             Console.Clear();
                             Console.SetCursorPosition(50, 2); Console.Write("THÔNG TIN SẢN PHẨM ĐANG SỬA");
-                            Console.SetCursorPosition(50, 3); Console.Write("Mã       : " + sp.Masanpham);
-                            Console.SetCursorPosition(50, 4); Console.Write("Tên      : " + sp.Tensanpham);
-                            Console.SetCursorPosition(50, 5); Console.Write("Loại     : " + sp.Loai);
-                            Console.SetCursorPosition(50, 6); Console.Write("Số lượng : " + sp.Soluong);
-                            Console.SetCursorPosition(50, 7); Console.Write("Đơn giá  : " + sp.Dongia);
+                            Console.SetCursorPosition(50, 3); Console.Write("Mã sản phẩm  : " + sp.Masanpham);
+                            Console.SetCursorPosition(50, 4); Console.Write("Tên sản phẩm : " + sp.Tensanpham);
+                            Console.SetCursorPosition(50, 5); Console.Write("Loại         : " + sp.Loai);
+                            Console.SetCursorPosition(50, 6); Console.Write("Số lượng     : " + sp.Soluong);
+                            Console.SetCursorPosition(50, 7); Console.Write("Đơn giá      : " + sp.Dongia);
 
-                            Console.SetCursorPosition(45, 13); Console.WriteLine("Nhập đơn giá sản phẩm mới: ");
-                            Console.SetCursorPosition(77, 13);
+                            Console.SetCursorPosition(50, 13); Console.Write("Nhập đơn giá sản phẩm mới: ");
                             int giamoi = int.Parse(Console.ReadLine());
                             if (giamoi > 0)
                             {
@@ -281,13 +271,13 @@ namespace Project_1_NTAT_10119056_101191.BusinessLayer
                             do
                             {
                                 Console.SetCursorPosition(50, 2); Console.Write("THÔNG TIN SẢN PHẨM ĐANG SỬA");
-                                Console.SetCursorPosition(50, 3); Console.Write("Mã       : " + sp.Masanpham);
-                                Console.SetCursorPosition(50, 4); Console.Write("Tên      : " + sp.Tensanpham);
-                                Console.SetCursorPosition(50, 5); Console.Write("Loại     : " + sp.Loai);
-                                Console.SetCursorPosition(50, 6); Console.Write("Số lượng : " + sp.Soluong);
-                                Console.SetCursorPosition(50, 7); Console.Write("Đơn giá  : " + sp.Dongia);
+                                Console.SetCursorPosition(50, 3); Console.Write("Mã sản phẩm  : " + sp.Masanpham);
+                                Console.SetCursorPosition(50, 4); Console.Write("Tên sản phẩm : " + sp.Tensanpham);
+                                Console.SetCursorPosition(50, 5); Console.Write("Loại         : " + sp.Loai);
+                                Console.SetCursorPosition(50, 6); Console.Write("Số lượng     : " + sp.Soluong);
+                                Console.SetCursorPosition(50, 7); Console.Write("Đơn giá      : " + sp.Dongia);
 
-                                Console.SetCursorPosition(50, 13); Console.Write("Nhập mã sản phẩm mới: ");
+                                Console.SetCursorPosition(50, 13); Console.Write("Nhập mã sản phẩm mới  : ");
                                 string mamoi = Console.ReadLine();
 
                                 foreach (var x in ListSanPham())
@@ -302,33 +292,30 @@ namespace Project_1_NTAT_10119056_101191.BusinessLayer
                                     }
                                     else
                                     {
-                                        if (!string.IsNullOrEmpty(mamoi))
-                                        {
-                                            sp.Masanpham = mamoi;
-                                        }
+                                        sp.Masanpham = mamoi;
                                         ktma = false;
                                     }
                                 }
                             } while (ktma == true);
-                            Console.SetCursorPosition(50, 14); Console.Write("Nhập tên sản phẩm mới: ");
+                            Console.SetCursorPosition(50, 14); Console.Write("Nhập tên sản phẩm mới : ");
                             string tenmoi = Console.ReadLine();
                             if (!string.IsNullOrEmpty(tenmoi))
                             {
                                 sp.Tensanpham = tenmoi;
                             }
-                            Console.SetCursorPosition(50, 15); Console.Write("Nhập loại sản phẩm mới: ");
+                            Console.SetCursorPosition(50, 15); Console.Write("Nhập loại mới         : ");
                             string loaimoi = Console.ReadLine();
                             if (!string.IsNullOrEmpty(loaimoi))
                             {
                                 sp.Loai = loaimoi;
                             }
-                            Console.SetCursorPosition(50, 16); Console.Write("Nhập số lượng sản phẩm mới: ");
+                            Console.SetCursorPosition(50, 16); Console.Write("Nhập số lượng mới     : ");
                             int soluongmoi = int.Parse(Console.ReadLine());
                             if (soluongmoi > 0)
                             {
                                 sp.Soluong = soluongmoi;
                             }
-                            Console.SetCursorPosition(50, 17); Console.Write("Nhập đơn giá sản phẩm mới: ");
+                            Console.SetCursorPosition(50, 17); Console.Write("Nhập đơn giá mới      : ");
                             int giamoi = int.Parse(Console.ReadLine());
                             if (giamoi > 0)
                             {
@@ -338,66 +325,81 @@ namespace Project_1_NTAT_10119056_101191.BusinessLayer
                         }
                 }
                 Console.Clear();
-                Console.SetCursorPosition(50, 9); Console.Write("THÔNG TIN SẢN PHẨM ĐÃ SỬA");
-                Console.SetCursorPosition(50, 10); Console.Write("Mã       : " + sp.Masanpham);
-                Console.SetCursorPosition(50, 11); Console.Write("Tên      : " + sp.Tensanpham);
-                Console.SetCursorPosition(50, 12); Console.Write("Loại     : " + sp.Loai);
-                Console.SetCursorPosition(50, 13); Console.Write("Số lượng : " + sp.Soluong);
-                Console.SetCursorPosition(50, 14); Console.Write("Đơn giá  : " + sp.Dongia);
+                Console.SetCursorPosition(45, 9); Console.Write("THÔNG TIN SẢN PHẨM ĐÃ SỬA");
+                Console.SetCursorPosition(45, 10); Console.Write("Mã sản phẩm  : " + sp.Masanpham);
+                Console.SetCursorPosition(45, 11); Console.Write("Tên sản phẩm : " + sp.Tensanpham);
+                Console.SetCursorPosition(45, 12); Console.Write("Loại         : " + sp.Loai);
+                Console.SetCursorPosition(45, 13); Console.Write("Số lượng     : " + sp.Soluong);
+                Console.SetCursorPosition(45, 14); Console.Write("Đơn giá      : " + sp.Dongia);
                 list.RemoveAt(i);
                 list.Add(sp);
                 spDAL.CapNhatSanPham(list);
-
+            }
+            else
+            {
+                Console.Clear();
+                Console.SetCursorPosition(45, 13);
+                Console.Write("Không tồn tại mã sản phẩm này");
+            }
+        }
+        public void XoaSanPham()
+        {
+            HienSanPham();
+            Console.SetCursorPosition(37, 28); Console.Write("Nhập mã sản phẩm cần xóa: ");
+            string masanpham = Console.ReadLine();
+            int i = 0;
+            List<SanPham> list = ListSanPham();
+            for (i = 0; i < list.Count; ++i)
+            {
+                if (list[i].Masanpham == masanpham)
+                {
+                    break;
+                }
+            }
+            if (i < list.Count)
+            {
+                Console.Clear();
+                Console.SetCursorPosition(50, 13);
+                Console.Write("Đã xóa sản phẩm");
+                list.RemoveAt(i);
+                spDAL.CapNhatSanPham(list);
+            }
+            else
+            {
+                Console.Clear();
+                Console.SetCursorPosition(45, 13);
+                Console.Write("Không tồn tại mã sản phẩm này");
+            }
+        }
+        public void TimSanPham()
+        {
+            Console.SetCursorPosition(45, 13); Console.Write("Nhập mã sản phẩm cần tìm: "); 
+            string masanpham = Console.ReadLine();
+            int i;
+            List<SanPham> list = ListSanPham();
+            for (i = 0; i < list.Count; i++)
+            {
+                if (list[i].Masanpham == masanpham)
+                {
+                    break;
+                }
+            }
+            if (i < list.Count)
+            {
+                Console.Clear();
+                SanPham sp = new SanPham(list[i]);
+                Console.SetCursorPosition(45, 9); Console.Write("THÔNG TIN SẢN PHẨM CẦN TÌM");
+                Console.SetCursorPosition(45, 10); Console.Write("Mã sản phẩm  : " + sp.Masanpham);
+                Console.SetCursorPosition(45, 11); Console.Write("Tên sản phẩm : " + sp.Tensanpham);
+                Console.SetCursorPosition(45, 12); Console.Write("Loại         : " + sp.Loai);
+                Console.SetCursorPosition(45, 13); Console.Write("Số lượng     : " + sp.Soluong);
+                Console.SetCursorPosition(45, 14); Console.Write("Đơn giá      : " + sp.Dongia);
             }
             else
             {
                 Console.Clear();
                 Console.SetCursorPosition(45, 13);
                 Console.WriteLine("Không tồn tại mã sản phẩm này");
-            }
-        }
-        public void XoaSanPham(SanPham sp,string masanpham)
-        {
-            int i;
-            List<SanPham> list = spDAL.ListSanPham();
-            for (i = 0; i < list.Count; i++)
-            {
-                if (list[i].Masanpham == masanpham)
-                {
-                    break;
-                }
-            }
-            if (i < list.Count)
-            {
-                list.RemoveAt(i);
-                list.Add(sp);
-                spDAL.CapNhatSanPham(list);
-            }
-            else
-            {
-                Console.SetCursorPosition(45, 25);
-                Console.WriteLine("Không tồn tại mã sản phẩm này");
-            }
-        }
-
-        public void TimSanPham(string masanpham)
-        {
-            int i;
-            List<SanPham> list = spDAL.ListSanPham();
-            for (i = 0; i < list.Count; i++)
-            {
-                if (list[i].Masanpham == masanpham)
-                {
-                    break;
-                }
-            }
-            if (i < list.Count)
-            {
-                Console.WriteLine(list[i].Masanpham + "\t" + list[i].Tensanpham + "\t" + list[i].Loai + "\t" + list[i].Soluong + "\t" + list[i].Dongia);
-            }
-            else
-            {
-                Console.WriteLine("Dữ liệu sai");
             }
         }
     }

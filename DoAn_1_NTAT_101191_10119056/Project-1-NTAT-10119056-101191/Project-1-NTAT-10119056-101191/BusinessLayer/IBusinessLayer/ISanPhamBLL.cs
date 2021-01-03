@@ -11,7 +11,7 @@ namespace Project_1_NTAT_10119056_101191.BusinessLayer.IBusinessLayer
         void HienSanPham();
         void ThemSanPham();
         void SuaSanPham();
-        void XoaSanPham(SanPham sp,string masanpham);   
-        void TimSanPham(string masanpham);
+        void XoaSanPham();   
+        void TimSanPham();
     }
 }

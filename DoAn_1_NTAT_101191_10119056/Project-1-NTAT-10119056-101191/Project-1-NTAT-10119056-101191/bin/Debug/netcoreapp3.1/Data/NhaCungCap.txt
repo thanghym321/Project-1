@@ -1,0 +1,10 @@
+
+ncc2|Intel|Hồ Chí Minh|379114366
+
+ncc3|AMD|Hồ Chí Minh|379114366
+
+ncc4|Nividia|Hồ Chí Minh|379114366
+
+ncc5|Colorful|Hồ Chí Minh|379114366
+
+ncc1|ASUS|Hà Nội|379114366

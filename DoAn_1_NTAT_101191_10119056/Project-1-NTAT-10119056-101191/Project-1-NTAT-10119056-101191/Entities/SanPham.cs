@@ -7,11 +7,8 @@ namespace Project_1_NTAT_10119056_101191.Entities
     public class SanPham
     {
         #region Các thành phần dữ liệu
-        private string masanpham;
-        private string tensanpham;
-        private string loai;
-        private int soluong;
-        private int dongia;
+        private string masanpham, tensanpham, loai;
+        private int soluong, dongia;
         #endregion
 
         #region Các thuộc tính
